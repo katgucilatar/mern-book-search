@@ -6,14 +6,6 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 // GET 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find();
-    },
-
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: user ? user._id : params.id});
-    },
-
     me: async (parent, args, context) => {
       if (context.user) {
         return Profile.findOne({ _id: context.user._id });
