@@ -55,7 +55,6 @@ const SignupForm = () => {
       email: '',
       password: '',
     });
-  };
 
   return (
     <>
@@ -112,6 +111,7 @@ const SignupForm = () => {
         </Button>
       </Form>
     </>
-  );
+  )
+  };
 
 export default SignupForm;
